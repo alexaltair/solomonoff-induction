@@ -78,3 +78,7 @@ class TuringMachine():
         status = None
         while status == None:
             status = self.step()
+
+    def __str__(self):
+        tape = ''.join(map(lambda boolean: 'M' if boolean else '_', self.tape))
+        return tape + " S:" + str(self.state) + " H:" + str(self.head)
