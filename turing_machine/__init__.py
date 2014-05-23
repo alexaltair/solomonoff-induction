@@ -1,1 +1,1 @@
-import turing_machine
+from turing_machine import *
