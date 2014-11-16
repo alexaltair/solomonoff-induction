@@ -1,8 +1,10 @@
 class State():
+    # Make halting state a real state object
     def __init__(self, params):
         # [bool, bool, int,
         #  bool, bool, int,
         #  bool, bool, int]
+        self.params = params
         (
             self.write_end,
             self.move_end,
@@ -14,6 +16,9 @@ class State():
             self.move_true,
             self.next_true
         ) = params
+
+    def __str__(self):
+        return self.params
 
 class TuringMachine():
     def __init__(self, number_of_states, state_array, tape_int):
